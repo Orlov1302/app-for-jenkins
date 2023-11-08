@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo "currentBuild.number = ${currentBuild.number}"
+				addSidebarLink(url:'https://www.cloudbess.com/', text:'CloudBess website', icon:'/userContent/cloudbees.png')
             }
             post {
                 success {
