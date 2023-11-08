@@ -11,7 +11,7 @@ pipeline {
                 success {
                     script {
                         echo "currentBuild.result = ${currentBuild.result}"
-                        currentBuild.result = 'FAILURE'
+                        echo "currentBuild.result = 'FAILURE'"
                         echo "currentBuild.result ---> FAILURE"
                     }
                 }
