@@ -9,7 +9,7 @@ pipeline {
                 echo "currentBuild.number = ${currentBuild.number}"
                 echo "WORKSPACE = $WORKSPACE"
                 echo "MYTOOL_VERSION = $MYTOOL_VERSION"
-                git branch: 'main',  credentialsId: 'System', url: 'https://github.com/Orlov1302/cod-for-jenkins.git'
+                git branch: 'main',  credentialsId: '7235e8f7-b8d3-42eb-8945-32bf6657aaa3', url: 'https://github.com/Orlov1302/cod-for-jenkins.git'
                 sh 'ls -a'
             }
             post {
