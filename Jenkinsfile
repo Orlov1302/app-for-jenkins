@@ -1,3 +1,4 @@
+env.MYTOOL_VERSION = '1.33'
 pipeline {
     agent any
 
@@ -7,6 +8,7 @@ pipeline {
                 echo 'Hello World!!!'
                 echo "currentBuild.number = ${currentBuild.number}"
                 echo "WORKSPACE = $WORKSPACE"
+                echo "MYTOOL_VERSION = $MYTOOL_VERSION"
             }
             post {
                 success {
