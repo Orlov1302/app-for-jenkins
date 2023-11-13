@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Hello World!!!'
                 echo "currentBuild.number = ${currentBuild.number}"
+                echo "WORKSPACE = $WORKSPACE"
             }
             post {
                 success {
