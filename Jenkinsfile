@@ -9,7 +9,7 @@ pipeline {
                 echo "currentBuild.number = ${currentBuild.number}"
                 echo "WORKSPACE = $WORKSPACE"
                 echo "MYTOOL_VERSION = $MYTOOL_VERSION"
-                ls -a
+                sh 'ls -a'
             }
             post {
                 success {
