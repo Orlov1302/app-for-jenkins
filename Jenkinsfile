@@ -10,6 +10,7 @@ pipeline {
                 echo "WORKSPACE = $WORKSPACE"
                 echo "MYTOOL_VERSION = $MYTOOL_VERSION"
                 git branch: 'main', credentialsId: '7235e8f7-b8d3-42eb-8945-32bf6657aaa3', url: 'https://github.com/Orlov1302/cod-for-jenkins.git'
+                input 'Continue to next stage?'
                 sh 'ls -a'
             }
             post {
