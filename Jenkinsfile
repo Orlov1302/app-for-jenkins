@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'TEST!!!'
-                sh /usr/games/EncodingCheck_jar/EncodingCheck.jar $WORKSPACE
+                sh '/usr/games/EncodingCheck_jar/EncodingCheck.jar $WORKSPACE'
             }
         }
     }
