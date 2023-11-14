@@ -11,6 +11,16 @@ pipeline {
                 sh 'ls -a'
             }
         }
+        stage ('Input') {
+            steps {
+                script {
+                    env.RESP1 = input message: '<message>', parameters: [string(defaultValue: '', description: 'Enter response 1', name: 'RESPONSE1')]
+                    env.RESP2 = input message: '<message>', parameters: [string(defaultValue: '', description: 'Enter response 2', name: 'RESPONSE2')]
+                    echo "${env.RESP1}"
+                }
+                echo "${env.RESP2}"
+            }
+        }
         stage('Test') {
             steps {
                 echo 'TEST!!!'
